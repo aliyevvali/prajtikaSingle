@@ -1,0 +1,31 @@
+﻿@model About
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="QisaAciqlama">QisaAciqlama</label>
+                <input asp-for="QisaAciqlama" class="form-control" placeholder="QisaAciqlama">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="ShirketAdi">ShirketAdi</label>
+                <input asp-for="ShirketAdi" class="form-control" placeholder="DeShirketAdis">
+            </div>
+            <div>
+                <label for="formFileLg" class="form-label">Upload File</label>
+                <input asp-for="Photo" class="form-control" type="file" />
+                <span class="text-danger" asp-validation-for="Photo"></span>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <button asp-controller="About" asp-action="Edit" type="submit" class="btn btn-primary">Edit</button>
+            <button asp-controller="About" asp-action="Index" class="btn btn-md rounded font-sm hover-up btn-primary">Go Back</button>
+
+        </div>
+    </form>
+</div>
+
